@@ -1,0 +1,66 @@
+.contest-selections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: Drafting Class JNL Oblique;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.selection-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ff0000;
+    border-radius: 35px;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.selection-content {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    font-family: Drafting Class JNL Oblique;
+}
+
+.selection-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff0000;
+}
+
+.selection-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+}
+
+.nav-button:active {
+    transform: scale(0.9);
+} 
