@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import Header from "../../components/Header/Header.tsx";
+import Header from "../../components/Header/Header";
 import "./Home.css";
-import Footer from "../../components/Footer/Footer.tsx";
+import Footer from "../../components/Footer/Footer";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function Home() {

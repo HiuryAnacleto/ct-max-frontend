@@ -4,10 +4,22 @@
     padding: 1.5rem 3rem;
     display: flex;
     align-items: center;
-    width: 94.5%;
-    height: 120px;
+    width: 100%;
+    height: 190px;
     font-family: Drafting Class JNL Oblique;
-    position: static;
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.header.scrolled {
+    height: 80px;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 3rem;
 }
 
 .header-left {
@@ -21,7 +33,14 @@
 .logo {
     height: 100px;
     width: auto;
-    
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .logo {
+    height: 0;
+    opacity: 0;
+    width: 0;
+    margin: 0;
 }
 
 .logo-text {
@@ -31,54 +50,100 @@
     font-weight: bold;
     font: Drafting Class JNL Oblique;
     text-align: center;
-    
+    transition: all 0.3s ease;
 }
 
 .logo-text-bold {
     font-weight: normal;
+
 }
 
 .sub-logo {
     color: #fff;
     font-size: 1.2rem;
-
     margin: 0;
     font-weight: normal;
-    
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.header.scrolled .sub-logo {
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+.header.scrolled .logo-text {
+    font-size: 2rem;
+    margin-left: 0;
 }
 
 .header-nav {
     margin-right: 2rem;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .header-nav {
+    margin-right: 1rem;
+}
+
+.header.scrolled .header-nav a {
+    font-size: 120%;
 }
 
 .header-nav ul {
     display: flex;
-    gap: 4rem;
+    gap: 5rem;
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: start;
 }
 
+.header-nav li {
+    position: relative;
+}
+
 .header-nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 900;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     font-size: 140%;
-    
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+}
 
+.header-nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff0000;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
 }
 
 .header-nav a:hover {
     color: #ff0000;
+    transform: translateY(-3px);
+}
+
+.header-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    margin-left: 10rem;
+    gap: 2rem;
+    margin-left: 8rem;
     margin-top: 0;
     margin-right: 4rem;
     justify-content: end;
@@ -98,10 +163,11 @@
     color: #ffffff;
     font-size: 1.8rem;
     transition: transform 0.3s ease, color 0.3s ease;
+    
 }
 
 .social-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1,2);
     color: #ff0000;
 }
 
@@ -115,6 +181,7 @@
     transition: background-color 0.3s ease;
     white-space: nowrap;
     font-size: 1.1rem;
+    align-items: center;
 }
 
 .btn {
