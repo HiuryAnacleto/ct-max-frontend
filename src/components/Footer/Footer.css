@@ -1,8 +1,10 @@
 .footer {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 3rem 0;
-    margin-top: 4rem;
+    padding: 5rem 10rem 10rem 10rem;
+    width: 100%;
+    
+
 }
 
 .footer-container {
@@ -56,17 +58,53 @@
     display: flex;
     gap: 1.5rem;
     margin-top: 2rem;
+    align-items: start;
 }
 
 .social-icon {
     color: #ffffff;
     font-size: 1.8rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px 
 }
 
 .social-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.1) translateY(-3px);
     color: #ff0000;
+    background: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: #ff0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-bottom a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #cc0000;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

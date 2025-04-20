@@ -33,7 +33,6 @@ const Header = () => {
             <nav className="header-nav">
                 <ul>
                     <li><a href="sobre">Sobre</a></li>
-                    <li><a href="endereço">Endereço</a></li>
                     <li><a href="aula-experimental">Aula experimental</a></li>
                     <li><a href="seja-aluno">Seja Aluno</a></li>
                     <li><a href="consultoria">Consultoria</a></li>

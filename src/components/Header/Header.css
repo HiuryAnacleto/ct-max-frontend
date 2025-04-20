@@ -55,7 +55,6 @@
 
 .logo-text-bold {
     font-weight: normal;
-
 }
 
 .sub-logo {
@@ -81,6 +80,7 @@
 
 .header-nav {
     margin-right: 2rem;
+    margin-left: 2rem;
     transition: all 0.3s ease;
 }
 
@@ -94,11 +94,11 @@
 
 .header-nav ul {
     display: flex;
-    gap: 5rem;
+    gap: 6rem;
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: start;
+    text-align: center;
 }
 
 .header-nav li {
@@ -141,34 +141,40 @@
 
 .header-right {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 2rem;
-    margin-left: 8rem;
+    justify-content: flex-end;
+    margin-left: auto;
     margin-top: 0;
-    margin-right: 4rem;
-    justify-content: end;
-}
-
-.text-box {
-    display: flex;
-    align-items: center;
+    margin-right: 1rem;
+    gap: 2rem;
 }
 
 .social-icons {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
+    align-items: center;
+    margin-right: 0.5rem;
+    height: 100%;
+    justify-content: center;
+    margin-left: 0;
 }
 
 .social-icon {
     color: #ffffff;
     font-size: 1.8rem;
     transition: transform 0.3s ease, color 0.3s ease;
-    
 }
 
 .social-icon:hover {
-    transform: scale(1,2);
+    transform: scale(1.2);
     color: #ff0000;
+}
+
+.text-box {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 .login-button {

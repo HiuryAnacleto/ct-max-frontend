@@ -48,6 +48,13 @@ function Footer() {
                     </div>
                 </div>
             </div>
+            <div className="footer-bottom">
+                <p>© 2024 CT Max Fight. Todos os direitos reservados.</p>
+                <p>
+                    <a href="/politica-de-privacidade">Política de Privacidade</a> | 
+                    <a href="/termos-de-uso">Termos de Uso</a>
+                </p>
+            </div>
         </footer>
     );
 }
