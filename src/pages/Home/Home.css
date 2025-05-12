@@ -68,6 +68,7 @@
     margin-bottom: 4rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
 }
 
 .description {
@@ -143,4 +144,226 @@
 .small-box p {
     font-size: 1rem;
     line-height: 1.4;
+}
+
+
+/* Grade de Horários */
+.schedule-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    margin: 1rem auto 3rem auto;
+    max-width: 1400px;
+    width: 99%;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    border: 2.5px solid #ff0000;
+}
+
+.schedule-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.schedule-header h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.2rem;
+    background: none;
+    border-radius: 0;
+    overflow: visible;
+    padding: 0;
+}
+
+.schedule-day {
+    padding: 1.2rem 0.8rem;
+    min-height: 170px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    transition: box-shadow 0.35s cubic-bezier(.4,2,.3,1), transform 0.35s cubic-bezier(.4,2,.3,1), border-color 0.35s;
+    border: 1.5px solid #fff;
+}
+
+.schedule-day:hover {
+    box-shadow: 0 16px 40px 0 rgba(255,59,59,0.22), 0 4px 24px 0 rgba(0,0,0,0.18);
+    transform: scale(1.06) translateY(-8px);
+    border-color: #fff;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    z-index: 3;
+    filter: brightness(1.08) drop-shadow(0 0 8px #fff8);
+}
+
+.schedule-day h3 {
+    color: #ff0000;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 0.5rem;
+}
+
+.time-slot {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: none;
+    padding: 0.3rem 0.2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.time-slot.infantil {
+    background: #fff;
+    border-radius: 35px;
+    padding: 0.3rem 0.2rem;
+    display: flex;
+    margin: 0.5rem 0;
+    width: 100%;
+    align-items: center;
+    gap: 0.7rem;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.infantil-label {
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: normal;
+    margin: 0 0.1rem;
+    text-shadow: none;
+}
+
+.time {
+    color: #fff;
+    font-size: 1rem;
+    white-space: nowrap;
+    min-width: 70px;
+    font-weight: 500;
+}
+
+.class-type {
+    color: #ff3b3b;
+    font-size: 1rem;
+    font-style: italic;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.class-type.kickboxing {
+    color: #ff0000;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.schedule-cta {
+    text-align: center;
+    margin-top: 1.2rem;
+    background: none;
+    border-radius: 18px;
+    padding: 0.5rem 0;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schedule-cta button {
+    background: #ff3b3b;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    padding: 0.7rem 0;
+    transition: background 0.2s;
+}
+
+.schedule-cta button:hover {
+    background: #c70000;
+}
+
+.time.infantil-label {
+    color: #000;
+}
+
+.fade-in {
+    animation: fadeIn 0.4s;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.fade-out {
+    animation: fadeOut 0.4s;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.slide-right {
+    position: relative;
+}
+.slide-left {
+    position: relative;
+}
+
+.sliding.slide-right {
+    animation: slideInRight 0.4s cubic-bezier(.4,2,.3,1);
+}
+
+.sliding.slide-left {
+    animation: slideInLeft 0.4s cubic-bezier(.4,2,.3,1);
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
 }

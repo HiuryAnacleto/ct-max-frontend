@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaInstagram, FaGlobe, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -21,6 +22,20 @@ const Header = () => {
         };
     }, []);
 
+    const scrollToContent = () => {
+        const contentSection = document.querySelector('.content-section');
+        if (contentSection) {
+            contentSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const scrollToSchedule = () => {
+        const scheduleContainer = document.querySelector('.schedule-container');
+        if (scheduleContainer) {
+            scheduleContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="header-left">
@@ -32,14 +47,14 @@ const Header = () => {
             </div>
             <nav className="header-nav">
                 <ul>
-                    <li><a href="sobre">Sobre</a></li>
-                    <li><a href="aula-experimental">Aula experimental</a></li>
-                    <li><a href="seja-aluno">Seja Aluno</a></li>
-                    <li><a href="consultoria">Consultoria</a></li>
+                    <li><a href="#" onClick={scrollToContent}>Sobre</a></li>
+                    <li><a href="#" onClick={scrollToSchedule}>Aula experimental</a></li>
+                    <li><a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">Seja Aluno</a></li>
+                    <li><Link to="/consultoria">Consultoria</Link></li>
                 </ul>
             </nav>
             <div className="header-right">
-                <div className="social-icons">
+                <div className="header-icons">
                     <a href="https://www.instagram.com/ctmax.fight/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram className="social-icon" />
                     </a>
@@ -53,8 +68,8 @@ const Header = () => {
                         <FaWhatsapp className="social-icon" />
                     </a>
                 </div>
-                <div className="text-box">
-                    <a href="http://localhost:3000/login" className="btn btn-white btn-animate"><strong>Login</strong></a>
+                <div className="header-login">
+                    <Link to="/login" className="btn btn-white btn-animate"><strong>Login</strong></Link>
                 </div>
             </div>
         </header>

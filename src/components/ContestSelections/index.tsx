@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ContestSelections.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ContestSelections = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,6 +48,12 @@ const ContestSelections = () => {
                 <button className="nav-button" onClick={handleNext}>
                     <FaChevronRight />
                 </button>
+            </div>
+            <div className="register-link">
+                <p>
+                    Não tem uma conta?{' '}
+                    <Link to="/cadastro">Cadastre-se</Link>
+                </p>
             </div>
         </div>
     );
